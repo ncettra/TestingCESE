@@ -10,6 +10,4 @@ void ledsTurnOnSingle(int led);
 void ledsTurnOffSingle(int led);
 void ledsTurnOnAll(void);
 void ledsTurnOffAll(void);
-
-
 #endif

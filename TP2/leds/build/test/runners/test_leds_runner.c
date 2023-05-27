@@ -16,7 +16,8 @@ extern void test_turn_on_turn_off_single_led(void);
 extern void test_turn_on_turn_off_differents_leds(void);
 extern void test_turn_on_all_leds_when_all_off(void);
 extern void test_turn_off_all_leds_when_all_on(void);
-extern void test_check_args_limits();
+extern void test_check_dw_args_limits();
+extern void test_check_up_args_limits();
 extern void test_check_wrong_args();
 extern void test_wrong_init_leds();
 
@@ -86,15 +87,16 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_leds.c");
-  run_test(test_all_leds_start_off, "test_all_leds_start_off", 34);
-  run_test(test_turn_on_single_led, "test_turn_on_single_led", 42);
-  run_test(test_turn_on_turn_off_single_led, "test_turn_on_turn_off_single_led", 49);
-  run_test(test_turn_on_turn_off_differents_leds, "test_turn_on_turn_off_differents_leds", 57);
-  run_test(test_turn_on_all_leds_when_all_off, "test_turn_on_all_leds_when_all_off", 69);
-  run_test(test_turn_off_all_leds_when_all_on, "test_turn_off_all_leds_when_all_on", 78);
-  run_test(test_check_args_limits, "test_check_args_limits", 86);
-  run_test(test_check_wrong_args, "test_check_wrong_args", 100);
-  run_test(test_wrong_init_leds, "test_wrong_init_leds", 106);
+  run_test(test_all_leds_start_off, "test_all_leds_start_off", 33);
+  run_test(test_turn_on_single_led, "test_turn_on_single_led", 39);
+  run_test(test_turn_on_turn_off_single_led, "test_turn_on_turn_off_single_led", 44);
+  run_test(test_turn_on_turn_off_differents_leds, "test_turn_on_turn_off_differents_leds", 50);
+  run_test(test_turn_on_all_leds_when_all_off, "test_turn_on_all_leds_when_all_off", 58);
+  run_test(test_turn_off_all_leds_when_all_on, "test_turn_off_all_leds_when_all_on", 63);
+  run_test(test_check_dw_args_limits, "test_check_dw_args_limits", 69);
+  run_test(test_check_up_args_limits, "test_check_up_args_limits", 76);
+  run_test(test_check_wrong_args, "test_check_wrong_args", 83);
+  run_test(test_wrong_init_leds, "test_wrong_init_leds", 88);
 
   return UnityEnd();
 }
